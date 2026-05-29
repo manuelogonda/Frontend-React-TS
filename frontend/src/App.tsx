@@ -1,14 +1,17 @@
 
+import { Bio } from './Components/simple-components/Bio'
+import { Header } from './Components/simple-components/Header'
+import { ProjectList } from './Components/simple-components/Projects'
 import './index.css'
 
 function App() {
 
   return (
     <>
-      <div className="flex min-h-screen items-center justify-center bg-slate-900">
-      <h1 className="text-4xl font-bold text-sky-400 underline">
-        React + TS + Tailwind Works!
-      </h1>
+      <div className="min-h-screen bg-slate-50/50 py-4 px-4 sm:px-6">
+     <Header />
+     <Bio />
+     <ProjectList />
     </div>
     </>
   )
