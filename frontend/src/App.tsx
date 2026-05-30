@@ -3,7 +3,7 @@ import { Bio } from './Components/simple-components/Bio'
 import { Header } from './Components/simple-components/Header'
 import { ProjectCard, type ProjectAttributes } from './Components/simple-components/ProjectCard'
 import { ProjectList } from './Components/simple-components/Projects';
-import { CounterWithConstraint } from './Components/StateManagement/UseStateThemeToggler';
+import { CounterWithConstraint, Footer, MainContent, Navbar, useTheme } from './Components/StateManagement/UseStateThemeToggler';
 import './index.css'
 
 const MOCK_PROJECT_DATABASE: ProjectAttributes[] = [
@@ -49,12 +49,26 @@ const MOCK_PROJECT_DATABASE: ProjectAttributes[] = [
   }
 ];
 
-function App() {
+
+function AppContent() {
+  const { isDark } = useTheme();
 
   return (
-    <>
-      <div className="min-h-screen bg-slate-50/50 py-6 px-4 sm:px-6">
-      {/* <Header />
+    <div
+      className={`
+        transition-colors duration-300
+        ${isDark ? 'bg-gray-900' : 'bg-white'}
+      `}
+    >
+      <Navbar />
+      <MainContent />
+      <Footer />
+    </div>
+  );
+}
+
+      // <div className="min-h-screen bg-slate-50/50 py-6 px-4 sm:px-6">
+{/* <Header />
       <Bio />
       
       <main className="max-w-2xl mx-auto mt-4 font-sans">
@@ -81,9 +95,17 @@ function App() {
         </div>
       </main> */}
      
-    </div>
-    <CounterWithConstraint />
-    </>
+    // </div>
+    {/* <CounterWithConstraint /> */}
+    
+    // </>
+
+function App() {
+
+  return (
+   <>
+   <AppContent />
+   </>
   )
 }
 
