@@ -1,4 +1,5 @@
 
+import { MultiStepForm } from './Components/FormHandling-EventListeners/form';
 import { Bio } from './Components/simple-components/Bio'
 import { Header } from './Components/simple-components/Header'
 import { ProjectCard, type ProjectAttributes } from './Components/simple-components/ProjectCard'
@@ -104,7 +105,7 @@ function App() {
 
   return (
    <>
-   <AppContent />
+   <MultiStepForm />
    </>
   )
 }
