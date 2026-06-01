@@ -116,7 +116,7 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-function ThemeProvider({children} : {children: ReactNode}) {
+export function ThemeProvider({children} : {children: ReactNode}) {
     const [isDark, setIsDark] = useState(() => {
         const saved = localStorage.getItem('theme');
         return saved ? JSON.parse(saved) : 'false';
@@ -153,7 +153,7 @@ export function Navbar() {
     return (
         <nav
         className={`transition-colors duration-300 $
-        {iaDark ? 'bg-gray-900 text-white border-gray-700' : 
+        {isDark ? 'bg-gray-900 text-white border-gray-700' : 
         'bg-white text-gray-900 border-gray-200'}  border-b sticky top-0 z-50`}>
             <div className="flex items-center gap-3">
                 <div className="text-2xl"></div>
