@@ -1,4 +1,6 @@
 
+import { Outlet } from 'react-router-dom';
+import { Navigation } from './Components/Routing/DynamicRoutes';
 import { MultiStepForm, RegistrationMainForm } from './Components/FormHandling-EventListeners/form';
 import { Bio } from './Components/simple-components/Bio'
 import { Header } from './Components/simple-components/Header'
@@ -52,32 +54,43 @@ import './index.css'
 // ];
 
 
-function AppContent() {
+// function AppContent() {
+  // const { isDark } = useTheme();
+
+  // return (
+  //   <div
+  //     className={`
+  //       transition-colors duration-300
+  //       ${isDark ? 'bg-gray-900' : 'bg-white'}
+  //     `}
+  //   >
+  //     <Navbar />
+  //     <ClockDashboard />
+  //     <main>
+  //       <RegistrationMainForm />
+  //     </main>
+  //     <Footer />
+  //   </div>
+  // );
+// }
+
+function App() {
   const { isDark } = useTheme();
 
   return (
-    <div
-      className={`
-        transition-colors duration-300
-        ${isDark ? 'bg-gray-900' : 'bg-white'}
-      `}
-    >
-      <Navbar />
-      <ClockDashboard />
-      <main>
-        <RegistrationMainForm />
+     <div className={`
+      transition-colors duration-300 min-h-screen flex flex-col
+      ${isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}
+    `}>
+      <Navigation />
+      
+      {/* Child routes render here */}
+      <main className="flex-1">
+        <Outlet />
       </main>
       <Footer />
     </div>
-  );
-}
-
-function App() {
-
-  return (
-   <ThemeProvider>
-    <AppContent />
-   </ThemeProvider>
+ 
   )
 }
 
