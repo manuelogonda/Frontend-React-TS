@@ -9,6 +9,7 @@ import { ProjectList } from './Components/simple-components/Projects';
 import { ClockDashboard } from './Components/StateManagement/SideEffects';
 import { CounterWithConstraint, Footer, MainContent, Navbar, ThemeProvider, useTheme } from './Components/StateManagement/UseStateThemeToggler';
 import './index.css'
+import { PostDashBoard } from './Components/AxiosRestAPI/Post';
 
 // const MOCK_PROJECT_DATABASE: ProjectAttributes[] = [
 //   {
@@ -82,13 +83,14 @@ function App() {
       transition-colors duration-300 min-h-screen flex flex-col
       ${isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}
     `}>
-      <Navigation />
+      {/* <Navigation />
       
       {/* Child routes render here */}
-      <main className="flex-1">
+      {/* <main className="flex-1">
         <Outlet />
       </main>
-      <Footer />
+      <Footer /> */} 
+      <PostDashBoard />
     </div>
  
   )
