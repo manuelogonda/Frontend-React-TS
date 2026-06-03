@@ -10,6 +10,7 @@ import { ClockDashboard } from './Components/StateManagement/SideEffects';
 import { CounterWithConstraint, Footer, MainContent, Navbar, ThemeProvider, useTheme } from './Components/StateManagement/UseStateThemeToggler';
 import './index.css'
 import { PostDashBoard } from './Components/AxiosRestAPI/Post';
+import { UserDashboard } from './Components/AxiosRestAPI/SearchFilterDashboard';
 
 // const MOCK_PROJECT_DATABASE: ProjectAttributes[] = [
 //   {
@@ -90,7 +91,8 @@ function App() {
         <Outlet />
       </main>
       <Footer /> */} 
-      <PostDashBoard />
+      {/* <PostDashBoard /> */}
+      <UserDashboard />
     </div>
  
   )
