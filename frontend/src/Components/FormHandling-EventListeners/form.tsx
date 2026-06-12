@@ -444,7 +444,7 @@ export function RegistrationMainForm() {
     return error;
   };
 
-  const validateAllFields = (): boolean => {
+  const validateAllFields = (): boolean => { 
     const newErrors: FormErrors = {};
 
     const nameError = validateField('name');
