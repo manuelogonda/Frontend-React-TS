@@ -21,7 +21,7 @@ export function VideoPlayer() {
     <div className="max-w-xl mx-auto p-4 bg-gray-900 rounded-2xl shadow-xl border border-gray-800">
       <video
         ref={videoRef}
-        src="https://assets.mixkit.co/videos/preview/mixkit-abstract-laser-lights-background-32156-large.mp4"
+        src="https://www.youtube.com/watch?v=tOrscbCLt5o"
         className="w-full h-64 object-cover rounded-xl border border-gray-700"
         loop
         muted

@@ -12,6 +12,9 @@ import { UserDashboard } from './Components/AuthContext/UserDashboard';
 import { AuthProvider } from './Components/context/AuthContext';
 import { VideoPlayer } from './Components/context/useRefDemo';
 import { CheckoutForm } from './Components/FormHandling-EventListeners/CheckoutForm';
+import { StrictTodoApp } from './Components/Type-Safe-Todo-interface/StrictTodo';
+import { ProductCatalog } from './Components/ZustandStateManagement/ProductCatalogue';
+import { ShoppingCartDashboard } from './Components/ZustandStateManagement/ShoppingCartDashboard';
 import './index.css'
 // import type { Product } from './Components/Type-Safe-App/types';
 // import { useTheme } from './Components/Type-Safe-App/Hooks/useTheme';
@@ -149,9 +152,12 @@ function App() {
     <AuthProvider>
       <div className="min-h-screen bg-gray-50 text-gray-900">
         <main className="p-6">
-          <UserDashboard />
+          {/* <UserDashboard />
           <CheckoutForm />
-          <VideoPlayer />
+          <VideoPlayer /> */}
+          {/* <StrictTodoApp /> */}
+          {/* <ShoppingCartDashboard /> */}
+          <ProductCatalog />
         </main>
       </div>
     </AuthProvider>
